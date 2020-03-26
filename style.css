@@ -24,7 +24,7 @@ body a{
 .bg-top {
     padding: 16px;
     background-image: url("./immagini/bananas.png");
-    position: fixed; 
+    position: relative; 
     top: 0; 
     width: 100%; 
     overflow: hidden;
@@ -54,10 +54,9 @@ h1{
 
 /*parte centrale*/
 
-.container{
-    margin-top: 160px;
-    display: flex;
-    flex-direction: column;
+#meet {
+    width: 100vw;
+    height: 100vh;
 }
 
 .row{
