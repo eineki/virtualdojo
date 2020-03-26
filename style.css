@@ -2,7 +2,8 @@
 /*test*/
 
 body{
-    background-color: rgb(241, 241, 241);
+    /*background-color: rgb(241, 241, 241);*/
+    background-color: #FFF9C4;
     padding: 0px;
     margin: 0px;
     font-family: 'Raleway', sans-serif;
@@ -22,7 +23,7 @@ body a{
 
 .bg-top {
     padding: 16px;
-    background-image: url("./immagini/mytexture.png");
+    background-image: url("./immagini/bananas.png");
     position: fixed; 
     top: 0; 
     width: 100%; 
@@ -64,20 +65,23 @@ h1{
     flex-direction: row;
     margin: 12px 128px;
     padding: 8px;
-    background-color: rgb(197, 197, 197);
+    /*background-color: rgb(197, 197, 197);*/
+    background-color: #C5CAE9;
     border-radius: 10px;
     justify-content: center;
 }
 
 .row:hover{
     box-shadow: 1px 1px 3px 1px #666;
-    background-color: rgb(184, 184, 184);
+    /*background-color: rgb(184, 184, 184);*/
+    background-color: #448AFF;
     transform: scale(1.01);
     transition-duration: 160ms;
 }
 
 .row.main{
-    background-color: rgb(87, 87, 87);
+    /*background-color: rgb(87, 87, 87);*/
+    background-color: #3F51B5;
     margin: 16px 64px 64px 64px;
     padding: 12px;
     color: #eee;
@@ -85,7 +89,8 @@ h1{
 }
 
 .row:hover.main{
-    background-color: rgb(97, 97, 97);
+    /*background-color: rgb(97, 97, 97);*/
+    background-color: #303F9F;
     box-shadow: 1px 1px 3px 1px #111;
     color: #eee;
     font-weight: 500;
