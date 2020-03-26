@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald|Raleway&display=swap');
+/*test*/
+
+body{
+    background-color: rgb(241, 241, 241);
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Raleway', sans-serif;
+    color: #111111;
+}
+
+body a{
+    color: #111111;
+    text-decoration: none;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.bg-top {
+    padding: 16px;
+    background-image: url("./immagini/mytexture.png");
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    overflow: hidden;
+    box-shadow: 1px 1px 5px 1px #333;
+    z-index: 999;
+}
+
+h2.right{
+    font-size: 12pt;
+    margin: 24px 64px;
+    text-align: center;
+}
+
+h1{
+    font-size: 36pt;
+    margin: 12px;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+}
+
+.loghi{
+    width: 240px;
+    height: 80px;
+    border-radius: 8px;
+    margin: 0px 64px;
+}
+
+/*parte centrale*/
+
+.container{
+    margin-top: 160px;
+    display: flex;
+    flex-direction: column;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    margin: 12px 128px;
+    padding: 8px;
+    background-color: rgb(197, 197, 197);
+    border-radius: 10px;
+    justify-content: center;
+}
+
+.row:hover{
+    box-shadow: 1px 1px 3px 1px #666;
+    background-color: rgb(184, 184, 184);
+    transform: scale(1.01);
+    transition-duration: 160ms;
+}
+
+.row.main{
+    background-color: rgb(87, 87, 87);
+    margin: 16px 64px 64px 64px;
+    padding: 12px;
+    color: #eee;
+    font-weight: 500;
+}
+
+.row:hover.main{
+    background-color: rgb(97, 97, 97);
+    box-shadow: 1px 1px 3px 1px #111;
+    color: #eee;
+    font-weight: 500;
+}
+
+.item {
+    margin: 4px;
+    flex-grow: 1;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.item.img{
+    max-width: 160px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+.item.animal-name{
+    flex-grow: 3;
+    font-size: 16pt;
+}
+
+/*for colors*/
+/*https://material.io/design/color/#tools-for-picking-colors*/
+/*
+.row.one{ background-color: #7986CB; }
+.row.two{ background-color: #81C784; }
+.row.three{ background-color: #E57373; }
+.row.four{ background-color: #A1887F; }
+.row.five{ background-color: #90A4AE; }
+.row.six{ background-color: #CE93D8; }
+.row.seven{ background-color: #FFF176; }
+.row.eight{ background-color: #FFB74D; }
+.row.nine{background-color: #E0E0E0; }
+.row.ten{ background-color: #4FC3F7; }
+.row.eleven{ background-color: #F06292; }
+.row.twelve{ background-color: #616161; }
+*/
