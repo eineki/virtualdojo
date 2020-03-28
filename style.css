@@ -1,16 +1,20 @@
-@import url('https://fonts.googleapis.com/css?family=Oswald|Raleway&display=swap');
-/*test*/
+@import url('https:/fonts.googleapis.com/css?family=Oswald|Raleway&display=swap');
 
 body{
     /*background-color: rgb(241, 241, 241);*/
     background-color: #FFF9C4;
-    padding: 0px;
-    margin: 0px;
+    background-image: url("./immagini/bananas.png");
+    padding: 0;
+    margin: 0;
     font-family: 'Raleway', sans-serif;
     color: #111111;
+	font-size: 16px;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
 }
 
-body a{
+body a {
     color: #111111;
     text-decoration: none;
 }
@@ -19,101 +23,291 @@ body a{
     display: flex;
     flex-direction: row;
     justify-content: center;
+	height: 3em;
+    background-color: #FFF9C4;
 }
 
 .bg-top {
-    padding: 16px;
-    background-image: url("./immagini/bananas.png");
-    position: fixed; 
-    top: 0; 
-    width: 100%; 
+    padding: 0 ;
+    position: fixed;
+    top: 0;
+    width: 100%;
     overflow: hidden;
     box-shadow: 1px 1px 5px 1px #333;
     z-index: 999;
 }
 
 h2.right{
-    font-size: 12pt;
-    margin: 24px 64px;
+    font-size: 50%;
+    margin: 2em 5em;
     text-align: center;
 }
 
 h1{
-    font-size: 36pt;
-    margin: 12px;
+    font-size: 2em;
+    margin: .33em;
     font-family: 'Oswald', sans-serif;
     text-align: center;
 }
 
-.loghi{
-    width: 240px;
-    height: 80px;
-    border-radius: 8px;
-    margin: 0px 64px;
+#intro {
+	position: absolute;
+	z-index: 980;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+    border-radius: 0 0 8px 8px;
+	background-repeat: no-repeat;
+	background-position: center 1em;
+	background-size: 50%;
+	align-items: center;
+	font-size: 200%;
+	line-height: 75%;
+	background-color: white;
 }
 
-/*parte centrale*/
-
-.container{
-    margin-top: 160px;
-    display: flex;
-    flex-direction: column;
+.meet #ticker,
+.meet #intro {
+	display: none;
 }
 
-.row{
-    display: flex;
-    flex-direction: row;
-    margin: 12px 128px;
-    padding: 8px;
-    /*background-color: rgb(197, 197, 197);*/
-    background-color: #C5CAE9;
-    border-radius: 10px;
-    justify-content: center;
+#intro img {
+    width: 425px;
 }
 
-.row:hover{
-    box-shadow: 1px 1px 3px 1px #666;
-    /*background-color: rgb(184, 184, 184);*/
-    background-color: #448AFF;
-    transform: scale(1.01);
-    transition-duration: 160ms;
+
+#intro h1 {
+	margin-top: 1em;
+	}
+
+
+#board {
+	display: flex;
+	flex-direction:row;
+	margin-top: 4em;
+	width: 100%;
+	overflow: hidden;
+	align-content: space-between;
 }
 
-.row.main{
-    /*background-color: rgb(87, 87, 87);*/
-    background-color: #3F51B5;
-    margin: 16px 64px 64px 64px;
-    padding: 12px;
-    color: #eee;
-    font-weight: 500;
+#board .left,
+#board .right {
+	display: flex;
+	flex-grow: 0;
+	flex-direction: column;
+	width: 10em;
+	overflow: hidden;
+	transition: width 0.75s;
 }
 
-.row:hover.main{
-    /*background-color: rgb(97, 97, 97);*/
-    background-color: #303F9F;
-    box-shadow: 1px 1px 3px 1px #111;
-    color: #eee;
-    font-weight: 500;
+#board .content {
+	flex-grow: 8;
+	}
+
+ /* #board img {
+	width: 10em;
+	height: 9em;
+}
+*/
+.container {
+	flex-grow: 8;
+	border: 1px solid gray;
+	background-color: white;
+	margin: 0 1em;
+	height: 75vh;
+	width: 75wv;
+	position: relative;
+	border-radius: 0.5em;
+	}
+
+a {
+	display: block;
+	position: relative;
+	width: 10em:
+	height: 8em;
+	}
+
+#locator {
+	z-index: 1000;
+	display: block;
+	position: absolute;
+	top: -5em;
+	left: 0em;
+	width: 10em;
+	height: 4em;
+	line-height: 4em;
+	text-align: center;
+	border: 1px solid darkgray;
+	border-radius: 0 0 0.5em 0em;
+	background-color: lightgray;
+	font-weight: bolder;
+	transition: top 0.75s;
+	}
+
+#mainhall {
+	z-index: 1000;
+	border-radius: 0 0 0.5em 0.5em;
+	top: -9em;
+	position: absolute;
+	margin-top: 0;
+	left: 75%;
+	transition: top 0.75s 0.5s;
 }
 
-.item {
-    margin: 4px;
-    flex-grow: 1;
-    align-items: center;
-    display: flex;
-    justify-content: center;
+.zoo #locator {
+	top: 0;
 }
 
-.item.img{
-    max-width: 160px;
-    height: 100px;
-    border-radius: 10px;
+.zoo #mainhall {
+	top:-4em;
 }
 
-.item.animal-name{
-    flex-grow: 3;
-    font-size: 16pt;
+.zoo #board .right,
+.zoo #board .left {
+	width: 0;
+	transition: width 0.75s;
 }
+
+/*
+.zoo a.paguro,
+.zoo a.ippo,
+.zoo a.gorilla,
+.zoo a.volpe,
+.zoo a.kakapo,
+.zoo a.lupo,
+.zoo a.lince,
+.zoo a.orca,
+.zoo a.coyote,
+.zoo a.foca,
+.zoo a.ornitorinco,
+.zoo a.koala {
+	display:none;
+}
+*/
+
+.zoo.koala .hall[href="#koala"],
+.zoo.ornitorinchi .hall[href="#ornitorinchi"],
+.zoo.foche .hall[href="#foche"],
+.zoo.coyote .hall[href="#coyote"],
+.zoo.orche .hall[href="#orche"],
+.zoo.linci .hall[href="#linci"],
+.zoo.lupi .hall[href="#lupi"],
+.zoo.kakapi .hall[href="#kakapi"],
+.zoo.volpi .hall[href="#volpi"],
+.zoo.gorilla .hall[href="#gorilla"],
+.zoo.ippopotami .hall[href="#ippopotami"],
+.zoo.paguri .hall[href="#paguri"] {
+    position: absolute;
+    top: -7em;
+    z-index: 1250;
+	transition: top 1s;
+}
+
+
+.zoo.koala .hall[href="#koala"],
+.zoo.ornitorinchi .hall[href="#ornitorinchi"],
+.zoo.foche .hall[href="#foche"],
+.zoo.coyote .hall[href="#coyote"],
+.zoo.orche .hall[href="#orche"],
+.zoo.linci .hall[href="#linci"] {
+    right: 0;
+}
+
+a.paguro,
+a.ippo,
+a.gorilla,
+a.volpe,
+a.kakapo,
+a.lupo,
+a.lince,
+a.orca,
+a.coyote,
+a.foca,
+a.ornitorinco,
+a.koala {
+	display:block;
+}
+/* background */
+
+.command {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	width:10em;
+	height: 8em;
+	margin-top: 0.5em;
+	position: relative;
+	overflow: hidden;
+	border: 1px solid darkgray;
+	}
+
+.left .command {
+	border-radius: 0 0.5em 0.5em 0;
+}
+
+.right .command {
+	border-radius: 0.5em 0 0 0.5em;
+	}
+
+.command::after {
+	content: attr(data-descr);
+	position: absolute;
+	bottom: 0;
+	background-color: blue;
+	color: white;
+	width: 100%;
+	text-align: center;
+	height: 1.5em;
+	padding-top: 0.5em;
+	font-weight: bold;
+}
+
+
+
+
+a.zoo {
+	background-image: url("./immagini/leone.jpg");
+}
+a.paguro {
+ 	background-image: url("./immagini/paguro.jpg");
+ }
+ a.ippo {
+ 	background-image: url("./immagini/ippo.jpg");
+ }
+ a.gorilla {
+	 background-image: url("./immagini/gorilla.jpg");
+ }
+ a.volpe {
+	background-image: url("./immagini/volpe-artica.jpg");
+}
+a.kakapo {
+ 	background-image: url("./immagini/kakapo.jpg");
+ }
+a.lupo {
+	background-image: url("./immagini/lupo.jpg");
+}
+a.lince {
+ background-image: url("./immagini/lince.jpg");
+}
+a.orca {
+	background-position: -4em;
+	background-image: url("./immagini/orca.jpg");
+}
+a.coyote {
+ background-image: url("./immagini/coyote.jpg");
+ }
+a.foca {
+	background-position: -1em;
+ background-image: url("./immagini/foca.jpg");
+ }
+ a.ornitorinco {
+	background-image: url("./immagini/ornitorinco.jpg");
+}
+a.koala {
+	background-image: url("./immagini/koala.jpg");
+}
+
 
 /*for colors*/
 /*https://material.io/design/color/#tools-for-picking-colors*/

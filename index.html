@@ -1,93 +1,62 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Accoglienza Virtual Dojo</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    <body>
-        <div class = "bg-top">
-            <div class = "header">
-                <img class = "loghi" src = "immagini/loghi.png"/>
-                <h1>Accoglienza Virtual Dojo</h1>
-                <h2 class = "right">Sabato<br>28 Marzo 2020</h2>
-            </div>
-        </div>
-
-        <div class = "container"></div>
-            <a class = "row main" href = "https://meet.jit.si/dojopd-all">
-                <img class = "item img" src= "./immagini/leone.jpg"/>
-                <p class = "item animal-name">Zoo - stanza comune</p>
-                <p class = "item">https://meet.jit.si/dojopd-all</p>
-            </a>
-
-            <!--1-->
-            <a class = "row one" href = "https://meet.jit.si/dojopd-paguri">
-                <img class = "item img" src= "./immagini/paguro.jpg"/>
-                <p class = "item animal-name">Paguri blu</p>
-                <p class = "item">https://meet.jit.si/dojopd-paguri</p>
-            </a>
-            <a class = "row two" href = "https://meet.jit.si/dojopd-ippopotami">
-                <img class = "item img" src= "./immagini/ippo.jpg"/>    
-                <p class = "item animal-name">Ippopotami verdi</p>
-                <p class = "item">https://meet.jit.si/dojopd-ippopotami</p>
-            </a>
-            <a class = "row three" href = "https://meet.jit.si/dojopd-gorilla">
-                <img class = "item img" src= "./immagini/gorilla.jpg"/>    
-                <p class = "item animal-name">Gorilla rossi</p>
-                <p class = "item">https://meet.jit.si/dojopd-gorilla</p>
-            </a>
-
-            <!--4-->
-            <a class = "row four" href = "https://meet.jit.si/dojopd-volpi-artiche">
-                <img class = "item img" src= "./immagini/volpe-artica.jpg"/>    
-                <p class = "item animal-name">Volpi artiche marroni</p>
-                <p class = "item">https://meet.jit.si/dojopd-volpi-artiche</p>
-            </a>
-            <a class = "row five" href = "https://meet.jit.si/dojopd-kakapi">
-                <img class = "item img" src= "./immagini/kakapo.jpg"/>    
-                <p class = "item animal-name">Kakapi grigi</p>
-                <p class = "item">https://meet.jit.si/dojopd-kakapi</p>
-            </a>
-            <a class = "row six" href = "https://meet.jit.si/dojopd-linci">
-                <img class = "item img" src= "./immagini/lince.jpg"/>    
-                <p class = "item animal-name">Linci viola</p>
-                <p class = "item">https://meet.jit.si/dojopd-linci</p>
-            </a>
-
-            <!--7-->
-            <a class = "row seven" href = "https://meet.jit.si/dojopd-lupi">
-                <img class = "item img" src= "./immagini/lupo.jpg"/>    
-                <p class = "item animal-name">Lupi gialli</p>
-                <p class = "item">https://meet.jit.si/dojopd-lupi</p>
-            </a>
-            <a class = "row eight" href = "https://meet.jit.si/dojopd-orche">
-                <img class = "item img" src= "./immagini/orca.jpg"/>    
-                <p class = "item animal-name">Orche arancioni</p>
-                <p class = "item">https://meet.jit.si/dojopd-orche</p>
-            </a>
-            <a class = "row nine" href = "https://meet.jit.si/dojopd-coyoti">
-                <img class = "item img" src= "./immagini/coyote.jpg"/>    
-                <p class = "item animal-name">Coyoti bianchi</p>
-                <p class = "item">https://meet.jit.si/dojopd-coyoti</p>
-            </a>
-
-            <!--10-->
-            <a class = "row ten" href = "https://meet.jit.si/dojopd-foche">
-                <img class = "item img" src= "./immagini/foca.jpg"/>    
-                <p class = "item animal-name">Foche azzurre</p>
-                <p class = "item">https://meet.jit.si/dojopd-foche</p>
-            </a>
-            <a class = "row eleven" href = "https://meet.jit.si/dojopd-ornitorinchi">
-                <img class = "item img" src= "./immagini/ornitorinco.jpg"/>    
-                <p class = "item animal-name">Ornitorinchi rosa </p>
-                <p class = "item">https://meet.jit.si/dojopd-ornitorinchi</p>
-            </a>
-            <a class = "row twelve" href = "https://meet.jit.si/dojopd-koala">
-                <img class = "item img" src= "./immagini/koala.jpg"/>    
-                <p class = "item animal-name">Koala neri</p>
-                <p class = "item">https://meet.jit.si/dojopd-koala</p>
-            </a>
-        </div>
-    </body>
+  <head>
+    <title>Accoglienza Virtual Dojo</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- script src="https://meet.jit.si/libs/lib-jitsi-meet.min.js"></script -->
+    <script src="https://meet.jit.si/external_api.js"></script>
+  </head>
+  <body class="">
+    <div class="bg-top">
+      <div class="header">
+	    <button id="shrink"> - </button>
+        <button id="enlarge"> + </button>
+      </div>
+    </div>
+    <div id="locator">test</div>
+  <form id="board" name="board">
+    <a id="mainhall" class="zoo command" href="#zoo"
+       data-descr="Zoo" data-room="dojopd-all"></a>
+    <div class="left">
+      <a class="paguro blu command hall" href="#paguri"
+         data-descr="Paguri blu" data-room="dojopd-paguri"></a>
+      <a class="ippo verde command hall" href="#ippopotami"
+         data-descr="Ippopotami verdi" data-room="dojopd_paguri"></a>
+      <a class="gorilla rosso command hall" href="#gorilla"
+         data-descr="Gorilla rossi" data-room="dojopd-gorilla"></a>
+      <a class="volpe marrone command hall" href="#volpi"
+         data-descr="Volpi artiche marroni" data-room="dojopd-volpi-artiche"></a>
+      <a class="kakapo grigio command hall" href="#kakapi"
+         data-descr="Kakapi grigi" data-room="dojopd-kakapi"></a>
+      <a class="lupo giallo command" href="#lupi"
+         data-descr="Lupi gialli" data-room="dojopd-lupi"></a>
+  </div>
+    <div id="meet" class="container">
+	<div id="intro">
+			<img src="immagini/loghi.png" alt="coderdojo Ensemble"/>
+			<h1>Virtual Dojo</h1>
+			<h2>Coderdojo Ensemble</h2>
+			<h3>28 Marzo 2020 ore 15:00</h3>
+	</div>
+	<div id="ticker"></div>
+	</div>
+  <div class="right">
+      <a class="lince viola command hall" href="#linci"
+         data-descr="Linci viola" data-room="dojopd-linci"></a>
+      <a class="orca aranxione command hall" href="#orche"
+         data-descr="Orche arancioni" data-room="dojopd-orche"></a>
+      <a class="coyote bianco command hall" href="#coyote"
+         data-descr="Coyote bianchi" data-room="dojopd-coyote"></a>
+      <a class="foca azzurra command hall" href="#foche"
+         data-descr="Foche azzurre" data-room="dojopd-foche"></a>
+      <a class="ornitorinco rosa command hall" href="#ornitorinchi"
+         data-descr="Ornitorinchi rosa" data-room="dojopd-ornitorinchi"></a>
+      <a class="koala nero command hall" href="#koala"
+         data-descr="Koala neri" data-room="dojopd-koala"></a>
+    </div>
+  </form>
+  <script type="text/javascript" src="main.js">
+    </script>
+  </body>
 </html>
