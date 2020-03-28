@@ -26,12 +26,9 @@ function hnd_teamswitch(ev) {
 	  }
 	  var nextRoomOpt = options;
 	  nextRoomOpt.roomName = self.dataset.room;
-	  var locator = document.getElementById("locator");
 	  if (self.classList.contains('zoo')) {
-		  locator.hinnerHTML = "";
 		  document.body.className = "meet";
 	  } else {
-		  locator.innerHTML=self.dataset.descr;
   	  	  document.body.classList.add('zoo');
 		  document.body.classList.add(self.href.split("#")[1]);
   	  }

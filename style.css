@@ -8,7 +8,7 @@ body{
     margin: 0;
     font-family: 'Raleway', sans-serif;
     color: #111111;
-	font-size: 16px;
+	font-size: attr(data-fsize px, 16);
 	width: 100vw;
 	height: 100vh;
 	overflow: hidden;
@@ -128,23 +128,6 @@ a {
 	height: 8em;
 	}
 
-#locator {
-	z-index: 1000;
-	display: block;
-	position: absolute;
-	top: -5em;
-	left: 0em;
-	width: 10em;
-	height: 4em;
-	line-height: 4em;
-	text-align: center;
-	border: 1px solid darkgray;
-	border-radius: 0 0 0.5em 0em;
-	background-color: lightgray;
-	font-weight: bolder;
-	transition: top 0.75s;
-	}
-
 #mainhall {
 	z-index: 1000;
 	border-radius: 0 0 0.5em 0.5em;
@@ -153,10 +136,6 @@ a {
 	margin-top: 0;
 	left: 75%;
 	transition: top 0.75s 0.5s;
-}
-
-.zoo #locator {
-	top: 0;
 }
 
 .zoo #mainhall {
